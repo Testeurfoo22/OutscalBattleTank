@@ -7,7 +7,7 @@ using Random = System.Random;
 public class TankSpawners : MonoBehaviour
 { 
     [SerializeField] private List<GameObject> tanksSpawners;
-    [SerializeField] private GameObject tankPrefab;
+    [SerializeField] private TankViewer tankViewer;
     
     
     // Start is called before the first frame update
@@ -17,12 +17,12 @@ public class TankSpawners : MonoBehaviour
         Random rnd = new Random(seed);
 
         int randomInt = rnd.Next(0, tanksSpawners.Count);
-        Instantiate(tankPrefab, tanksSpawners[randomInt].transform.position, Quaternion.identity);
+        CreateTank(tanksSpawners[randomInt]);
     }
 
     // Update is called once per frame
-    void Update()
+    void CreateTank(GameObject randomInt)
     {
-        
+        TankController tankController = new TankController(new TankModel(), tankViewer, randomInt);
     }
 }
