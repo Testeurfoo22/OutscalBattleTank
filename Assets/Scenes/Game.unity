@@ -145,7 +145,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 108639413}
   m_LocalRotation: {x: 0, y: -0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: 43, y: 0, z: 43}
+  m_LocalPosition: {x: 40.84, y: 1, z: 40.84}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 861647969}
@@ -205,6 +205,9 @@ MonoBehaviour:
   - {fileID: 1218772469}
   tankViewer: {fileID: 5765088119991189888, guid: e322aba4290bb734681b2275b7d979c5,
     type: 3}
+  movementSpeed: 5
+  rotationSpeed: 40
+  camPosition: {x: 0, y: 3, z: -6}
 --- !u!1 &1179543937
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,7 +315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1218772469}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: -43, y: 0, z: -43}
+  m_LocalPosition: {x: -39.28, y: 1, z: -39.28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 861647969}
@@ -342,7 +345,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1514249886}
   m_LocalRotation: {x: 0, y: -0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 43, y: 0, z: -43}
+  m_LocalPosition: {x: 43, y: 1, z: -43}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 861647969}
@@ -429,7 +432,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2058649545}
   m_LocalRotation: {x: 0, y: 0.92387956, z: 0, w: 0.38268343}
-  m_LocalPosition: {x: -43, y: 0, z: 43}
+  m_LocalPosition: {x: -40.65, y: 1, z: 40.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 861647969}

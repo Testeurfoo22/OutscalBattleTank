@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using Random = System.Random;
 
@@ -9,6 +10,10 @@ public class TankSpawners : MonoBehaviour
     [SerializeField] private List<GameObject> tanksSpawners;
     [SerializeField] private TankViewer tankViewer;
     
+    public float movementSpeed;
+    public float rotationSpeed;
+
+    public Vector3 camPosition;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +28,6 @@ public class TankSpawners : MonoBehaviour
     // Update is called once per frame
     void CreateTank(GameObject randomInt)
     {
-        TankController tankController = new TankController(new TankModel(), tankViewer, randomInt);
+        TankController tankController = new TankController(new TankModel(movementSpeed, rotationSpeed), tankViewer, randomInt);
     }
 }
