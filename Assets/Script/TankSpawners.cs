@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Security.Cryptography.X509Certificates;
+using System.Linq;
 using Script;
 using UnityEngine;
 using Random = System.Random;
@@ -29,29 +28,21 @@ public class TankSpawners : MonoBehaviour
     public int selectedTank;
     
     // Start is called before the first frame update
-    void Start()
+    public void OnTankSelected(TankTypes tankType)
     {
         int seed = DateTime.Now.Millisecond + (int)(Time.time * 1000);
         Random rnd = new Random(seed);
         
         int randomSpawn = rnd.Next(0, tanksSpawners.Count);
-        int randomTank = rnd.Next(0, tankList.Count);
+        //int randomTank = rnd.Next(0, tankList.Count);
+        Tank tank = tankList.FirstOrDefault(obj => obj.type == tankType);
 
-        CreateTank(tankList[randomTank], tanksSpawners[randomSpawn]);
-        
-        /*foreach (Tank tank in tankList)
-        {
-            List<int> validIndices = Enumerable.Range(0, tanksSpawners.Count)
-                .Where(i => !_excludesSpawn.Contains(i))
-                .ToList();
-            int randomInt = rnd.Next(0, validIndices.Count);
-            CreateTank(tank, tanksSpawners[randomInt]);
-        }*/
+        CreateTank(tank, tanksSpawners[randomSpawn]);
     }
 
     // Update is called once per frame
     void CreateTank(Tank tank, GameObject randomInt)
     {
-        TankController tankController = new TankController(new TankModel(tank), tankViewer, randomInt);
+        TankController _ = new TankController(new TankModel(tank), tankViewer, randomInt);
     }
 }
