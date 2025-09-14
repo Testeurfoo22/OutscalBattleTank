@@ -10,22 +10,10 @@ public class TankSpawners : MonoBehaviour
     [SerializeField] private List<GameObject> tanksSpawners;
     [SerializeField] private TankViewer tankViewer;
 
-
     public Vector3 camPosition;
-
-    [Serializable]
-    public class Tank
-    {
-        public float movementSpeed;
-        public float rotationSpeed;
-
-        public TankTypes type;
-
-        public Material color;
-    }
+    public Vector3 camRotation;
     
     public List<Tank> tankList;
-    public int selectedTank;
     
     // Start is called before the first frame update
     public void OnTankSelected(TankTypes tankType)
@@ -35,7 +23,7 @@ public class TankSpawners : MonoBehaviour
         
         int randomSpawn = rnd.Next(0, tanksSpawners.Count);
         //int randomTank = rnd.Next(0, tankList.Count);
-        Tank tank = tankList.FirstOrDefault(obj => obj.type == tankType);
+        Tank tank = tankList.FirstOrDefault(obj => obj.Type == tankType);
 
         CreateTank(tank, tanksSpawners[randomSpawn]);
     }

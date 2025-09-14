@@ -22,7 +22,7 @@ public class TankViewer : MonoBehaviour
         GameObject cam = GameObject.Find("Main Camera");
         cam.transform.SetParent(transform, false);
         cam.transform.localPosition = tankSpawners.camPosition;
-        cam.transform.rotation = new Quaternion(0f, 0f, 0f, 0f);
+        cam.transform.localRotation = Quaternion.Euler(tankSpawners.camRotation);
     }
 
     // Update is called once per frame

@@ -205,20 +205,12 @@ MonoBehaviour:
   - {fileID: 1218772469}
   tankViewer: {fileID: 5765088119991189888, guid: e322aba4290bb734681b2275b7d979c5,
     type: 3}
-  camPosition: {x: 0, y: 3, z: -6}
+  camPosition: {x: -10, y: 10, z: 4}
+  camRotation: {x: 25, y: 50, z: 0}
   tankList:
-  - movementSpeed: 5
-    rotationSpeed: 40
-    type: 0
-    color: {fileID: 2100000, guid: c39933e60e73205419d1f79a2af1fdac, type: 2}
-  - movementSpeed: 7
-    rotationSpeed: 50
-    type: 2
-    color: {fileID: 2100000, guid: ff21ff0ea9b18924bb1fdfbb0e58f5cb, type: 2}
-  - movementSpeed: 3
-    rotationSpeed: 30
-    type: 1
-    color: {fileID: 2100000, guid: 463052f3f7389124f9e7b34b0b931d0d, type: 2}
+  - {fileID: 11400000, guid: 03a3e5d1e5ea02448a6abf431b4df6c4, type: 2}
+  - {fileID: 11400000, guid: 19ca526f3bf30ed46a6dd0e228a754b3, type: 2}
+  - {fileID: 11400000, guid: 2189b56709009ce48a90f74ac3915b11, type: 2}
   selectedTank: 2
 --- !u!1 &1179543937
 GameObject:
@@ -272,8 +264,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -484,6 +476,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: LobbyUI
+      objectReference: {fileID: 0}
+    - target: {fileID: 3870283614252561372, guid: b02382b9e205b7f4d89a5c94e08a2724,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3870283614931308290, guid: b02382b9e205b7f4d89a5c94e08a2724,
         type: 3}

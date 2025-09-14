@@ -11,12 +11,12 @@ public class TankModel
     public TankTypes TankType;
     public Material Color;
 
-    public TankModel(TankSpawners.Tank tankData)
+    public TankModel(Tank tankData)
     {
-        MovementSpeed = tankData.movementSpeed;
-        RotationSpeed = tankData.rotationSpeed;
-        TankType = tankData.type;
-        Color = tankData.color;
+        MovementSpeed = tankData.MovementSpeed;
+        RotationSpeed = tankData.RotationSpeed;
+        TankType = tankData.Type;
+        Color = tankData.Color;
     }
 
     public void SetTankController(TankController tankController)
