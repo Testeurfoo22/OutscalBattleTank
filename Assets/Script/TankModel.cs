@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Script;
+using UnityEngine;
 
 public class TankModel
 {
@@ -6,11 +7,16 @@ public class TankModel
     
     public float MovementSpeed;
     public float RotationSpeed;
+    
+    public TankTypes TankType;
+    public Material Color;
 
-    public TankModel(float movementSpeed, float rotationSpeed)
+    public TankModel(TankSpawners.Tank tankData)
     {
-        MovementSpeed = movementSpeed;
-        RotationSpeed = rotationSpeed;
+        MovementSpeed = tankData.movementSpeed;
+        RotationSpeed = tankData.rotationSpeed;
+        TankType = tankData.type;
+        Color = tankData.color;
     }
 
     public void SetTankController(TankController tankController)
